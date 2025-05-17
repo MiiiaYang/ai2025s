@@ -154,7 +154,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      透過ComfyUI的節點式設計，我首次深入了解文生圖的技術核心。連接各功能模塊構建工作流的過程既直觀又富有啟發性，讓我理解了從提示詞輸入到最終圖像生成的完整流程。調整參數、實驗不同模型和採樣器的過程充滿樂趣，看到系統成功生成芙莉蓮角色的精美圖像時尤為滿足。這次體驗不僅提升了我對AI生成技術的理解，也激發了更多創作靈感。
     </div>
   </div>
 
@@ -170,22 +170,22 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>4</td>
-          <td>Simple baseline - 描述</td>
+          <td>Simple baseline - 完成ComfyUI建置</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>4</td>
-          <td>Medium baseline - 描述</td>
+          <td>Medium baseline - 完成芙莉蓮文生圖</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 描述</td>
+          <td>Strong baseline - 替換模型完成辛梅爾文生圖</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -195,18 +195,55 @@
   </div>
 
   <!-- ------------------------------------------------>
-  <div class="row hw12 bottomrow">
-    <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">    
+      <figure>
+        <figcaption>ComfyUI+工作流</figcaption>
+            <img src="ComfyUI.png" width="100%"/>
+        </figure>
     </div>
   </div>
 
   <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty"> 
+      <figure>
+        <figcaption>完成芙莉蓮Checkpoint、LoRA文生圖</figcaption>
+        <a href="https://civitai.com/models/1188071?modelVersionId=1337429">Checkpoint連結</a>
+        <br>
+        <a href="https://civitai.com/models/1209474/a4-test?modelVersionId=1373925">LoRA連結</a>
+        <p>1344 * 768</p>
+        <p>LoRA Strength : 1.0</p>
+        <p>Positive：Anime style female elf character, portrait, beautiful face with gentle smile, bright green eyes, long flowing blue and white gradient hair, pointed ears with ruby drop earrings, blue flower crown, elegant military-style blue jacket with gold trim and red gemstones, black choker collar, sunset sky background with soft clouds, floating blue flower petals in the air, blue flowers in foreground, dreamy atmospheric lighting, high quality illustration, soft color palette, detailed anime art, cinematic composition with shallow depth of field, distant male figure silhouette in background
+        </p>
+        <p>Negative：Negative prompt: full body shot, hands, deformed face, asymmetrical features, multiple characters in foreground, crowded scene, realistic style, photorealistic details, western cartoon style, flat colors, low quality, blurry, noisy background, oversaturated colors, dark lighting, indoor setting, city background, text overlay, watermarks, logos, multiple perspectives, distorted anatomy, incorrect proportions, chibi style, exaggerated expressions, childish art style, heavy shadows, dull colors, bright neon colors,
+        </p>
+        <img src="img1.png" width="100%"/>
+      </figure>
+    </div>
+  </div>
 
   <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">    
+      <figure>
+        <figcaption>替換Ckeckpoint、LoRA完成辛梅爾文生圖</figcaption>
+        <a href="https://civitai.com/models/820208/obsession-illustrious-xl">Checkpoint連結</a>
+        <br>
+        <a href="https://civitai.com/models/1204563?modelVersionId=1356500">LoRA連結1</a>
+        <br>
+        <p>1024 * 1280</p>
+        <p>LoRA1 Strength : 0.75</p>
+        <p>Positive: Anime style couple, face to face intimate moment, blue-haired male character with military style uniform and silver buckles, elegant female elf with white-blue hair, pointy ears, green eyes, gold collar with red gemstone, delicate earrings, soft dappled lighting through trees, gentle forest background with green bokeh effect, detailed anime illustration, soft color palette, romantic atmosphere, high quality, clean lines,
+        </p>
+        <p>Negative: multiple scenes, distorted anatomy, extra limbs, missing limbs, deformed hands, blurry, bad quality, low resolution, unfocused, grainy, noisy background, oversaturated colors, full body shot, crowded scene, multiple characters in background, realistic style, photorealistic, 3D render, Western cartoon style, childish style, chibi, exaggerated facial features, bright neon colors, dark horror elements, text overlay, watermarks, signatures, logos,
+        </p>
+        <img src="img2.png" width="100%"/>
+      </figure>
+    </div>
+  </div>
 
+  <!-- ------------------------------------------------>
 
 <script>
   $(function() {
